@@ -11,7 +11,7 @@ import UIKit
 class CategoryCell: UITableViewCell {
 
     @IBOutlet weak var categoryImage: UIImageView!
-    @IBOutlet weak var categoryName: UILabel!
+    @IBOutlet weak var categoryName: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,14 +20,13 @@ class CategoryCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 
     func updateUI(category: Category) {
         let preparedImage = UIImage(named: category.imageName)
         
-        categoryName.text = category.title
-        categoryImage.image = preparedImage// UIImageView(image: preparedImage!)
+        categoryName.setTitle(category.title, for: UIControlState.normal)
+        categoryImage.image = preparedImage
     }
 }
