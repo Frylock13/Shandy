@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="Shandy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,61 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6m-lg-h64">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nU4-ua-5AJ">
+                                        <state key="normal" image="hamburger"/>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Fz6-Rg-hQu">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="170" id="F4h-na-KYh"/>
+                                            <constraint firstAttribute="height" constant="54" id="mLf-Go-iIq"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.36078431372549019" green="0.23137254901960785" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Fz6-Rg-hQu" firstAttribute="centerY" secondItem="T6m-lg-h64" secondAttribute="centerY" id="DvI-Wu-1jI"/>
+                                    <constraint firstItem="nU4-ua-5AJ" firstAttribute="leading" secondItem="T6m-lg-h64" secondAttribute="leading" constant="8" id="I7W-76-IJ5"/>
+                                    <constraint firstAttribute="height" constant="70" id="LSL-SB-h0I"/>
+                                    <constraint firstItem="Fz6-Rg-hQu" firstAttribute="centerX" secondItem="T6m-lg-h64" secondAttribute="centerX" id="fqz-M5-iJ6"/>
+                                    <constraint firstItem="nU4-ua-5AJ" firstAttribute="centerY" secondItem="T6m-lg-h64" secondAttribute="centerY" id="uxQ-0O-m5X"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k3C-tA-Tte">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Hhs-ta-gmV">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hhs-ta-gmV" id="nRM-GC-Z3o">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="T6m-lg-h64" secondAttribute="trailing" id="1NX-NR-Bju"/>
+                            <constraint firstItem="T6m-lg-h64" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GcJ-wT-lZc"/>
+                            <constraint firstItem="k3C-tA-Tte" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MaS-hp-USG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k3C-tA-Tte" secondAttribute="bottom" id="W0c-gC-l9z"/>
+                            <constraint firstItem="T6m-lg-h64" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cYF-uo-7ru"/>
+                            <constraint firstAttribute="trailing" secondItem="k3C-tA-Tte" secondAttribute="trailing" id="kGl-wK-U3K"/>
+                            <constraint firstItem="k3C-tA-Tte" firstAttribute="top" secondItem="T6m-lg-h64" secondAttribute="bottom" id="rNb-Se-qQs"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hamburger" width="24" height="24"/>
+        <image name="logo" width="370" height="192"/>
+    </resources>
 </document>

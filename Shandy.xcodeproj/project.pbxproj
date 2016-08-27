@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FE16F2A41D70D82500B1358D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16F2A31D70D82500B1358D /* AppDelegate.swift */; };
-		FE16F2A61D70D82500B1358D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16F2A51D70D82500B1358D /* ViewController.swift */; };
+		FE16F2A61D70D82500B1358D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16F2A51D70D82500B1358D /* MainVC.swift */; };
 		FE16F2A91D70D82500B1358D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE16F2A71D70D82500B1358D /* Main.storyboard */; };
 		FE16F2AB1D70D82500B1358D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE16F2AA1D70D82500B1358D /* Assets.xcassets */; };
 		FE16F2AE1D70D82500B1358D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE16F2AC1D70D82500B1358D /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		FE16F2A01D70D82500B1358D /* Shandy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shandy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE16F2A31D70D82500B1358D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE16F2A51D70D82500B1358D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FE16F2A51D70D82500B1358D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		FE16F2A81D70D82500B1358D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE16F2AA1D70D82500B1358D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE16F2AD1D70D82500B1358D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				FE16F2A31D70D82500B1358D /* AppDelegate.swift */,
-				FE16F2A51D70D82500B1358D /* ViewController.swift */,
+				FE16F2A51D70D82500B1358D /* MainVC.swift */,
 				FE16F2A71D70D82500B1358D /* Main.storyboard */,
 				FE16F2AA1D70D82500B1358D /* Assets.xcassets */,
 				FE16F2AC1D70D82500B1358D /* LaunchScreen.storyboard */,
@@ -136,7 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE16F2A61D70D82500B1358D /* ViewController.swift in Sources */,
+				FE16F2A61D70D82500B1358D /* MainVC.swift in Sources */,
 				FE16F2A41D70D82500B1358D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +299,7 @@
 				FE16F2B41D70D82500B1358D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
