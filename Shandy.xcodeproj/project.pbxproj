@@ -12,6 +12,7 @@
 		FE16F2A91D70D82500B1358D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE16F2A71D70D82500B1358D /* Main.storyboard */; };
 		FE16F2AB1D70D82500B1358D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE16F2AA1D70D82500B1358D /* Assets.xcassets */; };
 		FE16F2AE1D70D82500B1358D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE16F2AC1D70D82500B1358D /* LaunchScreen.storyboard */; };
+		FE16F2D91D71E16D00B1358D /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16F2D81D71E16D00B1358D /* RoundedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FE16F2AA1D70D82500B1358D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE16F2AD1D70D82500B1358D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE16F2AF1D70D82500B1358D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE16F2D81D71E16D00B1358D /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,39 @@
 		FE16F2A21D70D82500B1358D /* Shandy */ = {
 			isa = PBXGroup;
 			children = (
+				FE16F2D71D71E0BD00B1358D /* View */,
+				FE16F2D61D71E0B800B1358D /* Model */,
+				FE16F2D51D71E0A900B1358D /* Controller */,
 				FE16F2A31D70D82500B1358D /* AppDelegate.swift */,
-				FE16F2A51D70D82500B1358D /* MainVC.swift */,
 				FE16F2A71D70D82500B1358D /* Main.storyboard */,
 				FE16F2AA1D70D82500B1358D /* Assets.xcassets */,
 				FE16F2AC1D70D82500B1358D /* LaunchScreen.storyboard */,
 				FE16F2AF1D70D82500B1358D /* Info.plist */,
 			);
 			path = Shandy;
+			sourceTree = "<group>";
+		};
+		FE16F2D51D71E0A900B1358D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FE16F2A51D70D82500B1358D /* MainVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FE16F2D61D71E0B800B1358D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FE16F2D71D71E0BD00B1358D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE16F2D81D71E16D00B1358D /* RoundedView.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +165,7 @@
 			files = (
 				FE16F2A61D70D82500B1358D /* MainVC.swift in Sources */,
 				FE16F2A41D70D82500B1358D /* AppDelegate.swift in Sources */,
+				FE16F2D91D71E16D00B1358D /* RoundedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -39,16 +39,33 @@
                                     <constraint firstItem="nU4-ua-5AJ" firstAttribute="centerY" secondItem="T6m-lg-h64" secondAttribute="centerY" id="uxQ-0O-m5X"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k3C-tA-Tte">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k3C-tA-Tte">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Hhs-ta-gmV">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="73" id="Hhs-ta-gmV">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hhs-ta-gmV" id="nRM-GC-Z3o">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="375" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cocktails" translatesAutoresizingMaskIntoConstraints="NO" id="ddc-7a-Eb0"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgv-JY-naS">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ddc-7a-Eb0" firstAttribute="top" secondItem="nRM-GC-Z3o" secondAttribute="top" id="3zs-be-gup"/>
+                                                <constraint firstItem="ddc-7a-Eb0" firstAttribute="leading" secondItem="nRM-GC-Z3o" secondAttribute="leading" id="XNC-nC-kLQ"/>
+                                                <constraint firstItem="Jgv-JY-naS" firstAttribute="centerY" secondItem="nRM-GC-Z3o" secondAttribute="centerY" id="ctB-WC-dJ6"/>
+                                                <constraint firstAttribute="bottom" secondItem="ddc-7a-Eb0" secondAttribute="bottom" id="jcw-kk-6oi"/>
+                                                <constraint firstAttribute="trailing" secondItem="ddc-7a-Eb0" secondAttribute="trailing" id="qnb-vo-ykP"/>
+                                                <constraint firstItem="Jgv-JY-naS" firstAttribute="centerX" secondItem="nRM-GC-Z3o" secondAttribute="centerX" id="xEt-1P-0oG"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.36078431372549019" green="1" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -71,6 +88,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cocktails" width="1095" height="300"/>
         <image name="hamburger" width="24" height="24"/>
         <image name="logo" width="370" height="192"/>
     </resources>
