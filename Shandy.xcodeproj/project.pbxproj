@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43B2C2E535570D5CFDC5B56D /* Pods_Shandy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AADC8EBB6D2DCB520F6739 /* Pods_Shandy.framework */; };
 		FE16F2A41D70D82500B1358D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16F2A31D70D82500B1358D /* AppDelegate.swift */; };
 		FE16F2A61D70D82500B1358D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16F2A51D70D82500B1358D /* MainVC.swift */; };
 		FE16F2A91D70D82500B1358D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE16F2A71D70D82500B1358D /* Main.storyboard */; };
@@ -15,9 +16,13 @@
 		FE16F2DB1D71E75500B1358D /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16F2DA1D71E75500B1358D /* CategoryCell.swift */; };
 		FE16F2DD1D71E92400B1358D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16F2DC1D71E92400B1358D /* Category.swift */; };
 		FE4E8C231D7592EE0013E347 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E8C221D7592EE0013E347 /* CategoryVC.swift */; };
+		FE51A2341D797F9400EE855D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = FE51A2331D797F9400EE855D /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6DF8F2D9DD8BDF70B981365A /* Pods-Shandy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shandy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shandy/Pods-Shandy.release.xcconfig"; sourceTree = "<group>"; };
+		77AADC8EBB6D2DCB520F6739 /* Pods_Shandy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shandy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		906513487E8BF7DA5C5F5DA1 /* Pods-Shandy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shandy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shandy/Pods-Shandy.debug.xcconfig"; sourceTree = "<group>"; };
 		FE16F2A01D70D82500B1358D /* Shandy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shandy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE16F2A31D70D82500B1358D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE16F2A51D70D82500B1358D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -28,6 +33,7 @@
 		FE16F2DA1D71E75500B1358D /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		FE16F2DC1D71E92400B1358D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		FE4E8C221D7592EE0013E347 /* CategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
+		FE51A2331D797F9400EE855D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +41,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43B2C2E535570D5CFDC5B56D /* Pods_Shandy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		67F91BA7332453445DB2EE74 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				906513487E8BF7DA5C5F5DA1 /* Pods-Shandy.debug.xcconfig */,
+				6DF8F2D9DD8BDF70B981365A /* Pods-Shandy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FCF9AC6C6D42142A3085C483 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77AADC8EBB6D2DCB520F6739 /* Pods_Shandy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FE16F2971D70D82500B1358D = {
 			isa = PBXGroup;
 			children = (
+				FE51A2331D797F9400EE855D /* Podfile */,
 				FE16F2A21D70D82500B1358D /* Shandy */,
 				FE16F2A11D70D82500B1358D /* Products */,
+				67F91BA7332453445DB2EE74 /* Pods */,
+				FCF9AC6C6D42142A3085C483 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,9 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE16F2B21D70D82500B1358D /* Build configuration list for PBXNativeTarget "Shandy" */;
 			buildPhases = (
+				CB528203247CA7331ECEF2D5 /* [CP] Check Pods Manifest.lock */,
 				FE16F29C1D70D82500B1358D /* Sources */,
 				FE16F29D1D70D82500B1358D /* Frameworks */,
 				FE16F29E1D70D82500B1358D /* Resources */,
+				28D1DE997DFFACF74A30120C /* [CP] Embed Pods Frameworks */,
+				38D80D166A4EB5A4C86DE7C2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,7 +159,7 @@
 				TargetAttributes = {
 					FE16F29F1D70D82500B1358D = {
 						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -158,11 +188,60 @@
 			files = (
 				FE16F2AE1D70D82500B1358D /* LaunchScreen.storyboard in Resources */,
 				FE16F2AB1D70D82500B1358D /* Assets.xcassets in Resources */,
+				FE51A2341D797F9400EE855D /* Podfile in Resources */,
 				FE16F2A91D70D82500B1358D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28D1DE997DFFACF74A30120C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shandy/Pods-Shandy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38D80D166A4EB5A4C86DE7C2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shandy/Pods-Shandy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB528203247CA7331ECEF2D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FE16F29C1D70D82500B1358D /* Sources */ = {
@@ -294,8 +373,10 @@
 		};
 		FE16F2B31D70D82500B1358D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 906513487E8BF7DA5C5F5DA1 /* Pods-Shandy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Shandy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.Shandy";
@@ -306,8 +387,10 @@
 		};
 		FE16F2B41D70D82500B1358D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DF8F2D9DD8BDF70B981365A /* Pods-Shandy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Shandy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.Shandy";

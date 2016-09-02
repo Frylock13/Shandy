@@ -26,11 +26,17 @@
                                             <constraint firstAttribute="height" constant="54" id="mLf-Go-iIq"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOK-MF-3uC">
+                                        <frame key="frameInset" minX="8" minY="19" width="40" height="32"/>
+                                        <state key="normal" image="hamburger"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.36078431372549019" green="0.23137254901960785" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Fz6-Rg-hQu" firstAttribute="centerY" secondItem="T6m-lg-h64" secondAttribute="centerY" id="DvI-Wu-1jI"/>
                                     <constraint firstAttribute="height" constant="70" id="LSL-SB-h0I"/>
+                                    <constraint firstItem="gOK-MF-3uC" firstAttribute="leading" secondItem="T6m-lg-h64" secondAttribute="leading" constant="8" id="PHw-hl-7it"/>
+                                    <constraint firstItem="gOK-MF-3uC" firstAttribute="centerY" secondItem="T6m-lg-h64" secondAttribute="centerY" id="cty-PH-tZN"/>
                                     <constraint firstItem="Fz6-Rg-hQu" firstAttribute="centerX" secondItem="T6m-lg-h64" secondAttribute="centerX" id="fqz-M5-iJ6"/>
                                 </constraints>
                             </view>
@@ -41,7 +47,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hhs-ta-gmV" id="nRM-GC-Z3o">
-                                            <frame key="frameInset" width="375" height="73"/>
+                                            <frame key="frameInset" width="375" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cocktails" translatesAutoresizingMaskIntoConstraints="NO" id="ddc-7a-Eb0">
@@ -93,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="105.79710144927537" y="32.608695652173914"/>
+            <point key="canvasLocation" x="104.8" y="31.934032983508249"/>
         </scene>
         <!--CategoryVC-->
         <scene sceneID="PiY-Et-5cW">
@@ -152,6 +158,7 @@
     </scenes>
     <resources>
         <image name="cocktails" width="1095" height="300"/>
+        <image name="hamburger" width="24" height="24"/>
         <image name="logo" width="370" height="192"/>
     </resources>
 </document>
