@@ -17,6 +17,9 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //var cats:String = ["Beer", "Cocttails"]
+        
+        
         let c1 = Category(imageName: "beer.jpg", title: "Beer")
         let c2 = Category(imageName: "cocktails.jpg", title: "Cocktails")
         let c3 = Category(imageName: "cocoa.jpg", title: "Cocoa")
@@ -44,7 +47,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as? CategoryCell {
@@ -63,6 +66,15 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
        return categories.count
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? CategoryVC {
+            let currentCell = tableView.indexPathForSelectedRow?.row
+            if currentCell != nil {
+                destination.categoryTitle = categories[currentCell!].title
+            } else {
+                destination.categoryTitle = "Undefined category"
+            }
+        }
+    }
 }
 
