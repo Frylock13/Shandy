@@ -14,6 +14,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var currentCategory = CurrentCategory()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,6 +48,10 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        currentCategory.getCategoryDetails {
+            // test
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
