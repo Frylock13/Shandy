@@ -18,7 +18,6 @@
 		FE4E8C231D7592EE0013E347 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E8C221D7592EE0013E347 /* CategoryVC.swift */; };
 		FE51A2341D797F9400EE855D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = FE51A2331D797F9400EE855D /* Podfile */; };
 		FE51A2361D7A4CA900EE855D /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE51A2351D7A4CA900EE855D /* Contants.swift */; };
-		FE51A2381D7A4FDC00EE855D /* CurrentCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE51A2371D7A4FDC00EE855D /* CurrentCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +36,6 @@
 		FE4E8C221D7592EE0013E347 /* CategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
 		FE51A2331D797F9400EE855D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FE51A2351D7A4CA900EE855D /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
-		FE51A2371D7A4FDC00EE855D /* CurrentCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +98,6 @@
 				FE16F2AC1D70D82500B1358D /* LaunchScreen.storyboard */,
 				FE16F2AF1D70D82500B1358D /* Info.plist */,
 				FE51A2351D7A4CA900EE855D /* Contants.swift */,
-				FE51A2371D7A4FDC00EE855D /* CurrentCategory.swift */,
 			);
 			path = Shandy;
 			sourceTree = "<group>";
@@ -257,7 +254,6 @@
 				FE4E8C231D7592EE0013E347 /* CategoryVC.swift in Sources */,
 				FE16F2A61D70D82500B1358D /* MainVC.swift in Sources */,
 				FE16F2DD1D71E92400B1358D /* Category.swift in Sources */,
-				FE51A2381D7A4FDC00EE855D /* CurrentCategory.swift in Sources */,
 				FE16F2A41D70D82500B1358D /* AppDelegate.swift in Sources */,
 				FE16F2DB1D71E75500B1358D /* CategoryCell.swift in Sources */,
 				FE51A2361D7A4CA900EE855D /* Contants.swift in Sources */,

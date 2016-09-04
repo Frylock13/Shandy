@@ -14,13 +14,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var currentCategory = CurrentCategory()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //var cats:String = ["Beer", "Cocttails"]
-        
         
         let c1 = Category(imageName: "beer.jpg", title: "Beer", slug: "beer")
         let c2 = Category(imageName: "cocktails.jpg", title: "Cocktails", slug: "cocktails")
@@ -48,10 +43,6 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        currentCategory.getCategoryDetails {
-            // test
-        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -75,11 +66,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? CategoryVC {
             let currentCell = tableView.indexPathForSelectedRow?.row
-            if currentCell != nil {
-                destination.categoryTitle = categories[currentCell!].title
-            } else {
-                destination.categoryTitle = "Undefined category"
-            }
+            destination.slug = categories[currentCell!].slug
         }
     }
 }

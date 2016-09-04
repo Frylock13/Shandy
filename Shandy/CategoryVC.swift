@@ -7,17 +7,18 @@
 //
 
 import UIKit
+import Alamofire
 
 class CategoryVC: UIViewController {
     
-    private var _categoryTitle: String!
+    private var _slug: String!
     
-    var categoryTitle:String {
+    var slug:String {
         get {
-            return _categoryTitle
+            return _slug
         }
         set {
-            _categoryTitle = newValue
+            _slug = newValue
         }
     }
     
@@ -33,6 +34,28 @@ class CategoryVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        categoryTitleLabel.text = categoryTitle
+        
+        getJSONAndUpdateUI()
+    }
+    
+    func getJSONAndUpdateUI() {
+        //categoryTitleLabel.text = currentCategory.name
+        let categoryPath = "\(BASE_URL)categories/\(slug).json"
+        let categoryUrl = URL(string: categoryPath)!
+        
+        Alamofire.request(categoryUrl, withMethod: .get).responseJSON { response in
+            debugPrint(response)     // prints detailed description of all response properties
+            
+            print(response.request)  // original URL request
+            print(response.response) // URL response
+            print(response.data)     // server data
+            print(response.result)   // result of response serialization
+            
+            if let JSON = response.result.value as? Dictionary<String, AnyObject> {
+                if let name = JSON["name"] as? String {
+                    self.categoryTitleLabel.text = name
+                }
+            }
+        }
     }
 }
