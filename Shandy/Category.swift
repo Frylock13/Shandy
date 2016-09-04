@@ -12,21 +12,23 @@ class Category {
     
     private var _imageName: String!
     private var _title: String!
+    private var _slug: String!
  
     var imageName: String {
-        get {
-            return _imageName
-        }
+        return _imageName
     }
     
     var title: String {
-        get {
-            return _title
-        }
+        return _title
     }
     
-    init(imageName: String, title: String) {
+    var slug: String {
+        return _slug
+    }
+    
+    init(imageName: String, title: String, slug: String) {
         _imageName = imageName
         _title = title
+        _slug = slug
     }
 }

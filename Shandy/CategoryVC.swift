@@ -25,7 +25,6 @@ class CategoryVC: UIViewController {
     
     @IBAction func backButtonPressed(_ sender: AnyObject) {
         dismiss(animated: true, completion: nil)
-        
     }
 
     override func viewDidLoad() {

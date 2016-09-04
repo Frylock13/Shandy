@@ -22,17 +22,17 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         //var cats:String = ["Beer", "Cocttails"]
         
         
-        let c1 = Category(imageName: "beer.jpg", title: "Beer")
-        let c2 = Category(imageName: "cocktails.jpg", title: "Cocktails")
-        let c3 = Category(imageName: "cocoa.jpg", title: "Cocoa")
-        let c4 = Category(imageName: "coffee-tea.jpg", title: "Coffee/Tea")
-        let c5 = Category(imageName: "liqueur.jpg", title: "Homemade Liqueur")
-        let c6 = Category(imageName: "milk-shake.jpg", title: "Milk / Float / Shake")
-        let c7 = Category(imageName: "ordinary.jpg", title: "Ordinary Drink")
-        let c8 = Category(imageName: "punch-party.jpg", title: "Punch / Party Drink")
-        let c9 = Category(imageName: "shot.jpg", title: "Shot")
-        let c10 = Category(imageName: "soda.jpg", title: "Soft Drink / Soda")
-        let c11 = Category(imageName: "other.jpg", title: "Other")
+        let c1 = Category(imageName: "beer.jpg", title: "Beer", slug: "beer")
+        let c2 = Category(imageName: "cocktails.jpg", title: "Cocktails", slug: "cocktails")
+        let c3 = Category(imageName: "cocoa.jpg", title: "Cocoa", slug: "")
+        let c4 = Category(imageName: "coffee-tea.jpg", title: "Coffee/Tea", slug: "")
+        let c5 = Category(imageName: "liqueur.jpg", title: "Homemade Liqueur", slug: "")
+        let c6 = Category(imageName: "milk-shake.jpg", title: "Milk / Float / Shake", slug: "")
+        let c7 = Category(imageName: "ordinary.jpg", title: "Ordinary Drink", slug: "")
+        let c8 = Category(imageName: "punch-party.jpg", title: "Punch / Party Drink", slug: "")
+        let c9 = Category(imageName: "shot.jpg", title: "Shot", slug: "")
+        let c10 = Category(imageName: "soda.jpg", title: "Soft Drink / Soda", slug: "")
+        let c11 = Category(imageName: "other.jpg", title: "Other", slug: "")
         
         categories.append(c1)
         categories.append(c2)

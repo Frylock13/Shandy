@@ -21,9 +21,6 @@ class CurrentCategory {
     }
     
     var recipesCount:Int {
-        if _recipesCount == nil {
-            _recipesCount = 0
-        }
         return _recipesCount
     }
     
