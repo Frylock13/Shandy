@@ -10,8 +10,8 @@ import Foundation
 import Alamofire
 
 class CurrentCategory {
-    var _name: String!
-    var _recipesCount: Int!
+    private var _name: String!
+    private var _recipesCount: Int!
     
     var name: String {
         if _name == nil {
@@ -28,7 +28,7 @@ class CurrentCategory {
     }
     
     func getCategoryDetails(completed: DownloadComplete) {
-        let categoryPath = "\(BASE_URL)/categories/beer.json"
+        let categoryPath = "\(BASE_URL)categories/beer.json"
         let categoryUrl = URL(string: categoryPath)!
         
         
@@ -39,9 +39,19 @@ class CurrentCategory {
             print(response.response) // URL response
             print(response.data)     // server data
             print(response.result)   // result of response serialization
-            
-            if let JSON = response.result.value {
+
+            if let JSON = response.result.value as? Dictionary<String, AnyObject> {
                 print("JSON: \(JSON)")
+                
+                if let name = JSON["name"] as? String {
+                    self._name = name
+                }
+                
+                if let count = JSON["recipes_count"] as? Int {
+                    self._recipesCount = count
+                }
+                
+                print("Name is \(self._name!) and recipes count is \(self._recipesCount!)")
             }
         }
         completed()
