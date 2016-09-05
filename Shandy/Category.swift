@@ -27,7 +27,7 @@ class Category {
     }
     
     init(imageName: String, title: String, slug: String) {
-        _imageName = imageName
+        _imageName = "\(slug).jpg"
         _title = title
         _slug = slug
     }

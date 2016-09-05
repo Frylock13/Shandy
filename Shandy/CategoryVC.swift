@@ -13,6 +13,10 @@ class CategoryVC: UIViewController {
     
     private var _slug: String!
     
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var descriptionView: UITextView!
+    @IBOutlet weak var totalRecipesCount: UILabel!
+    
     var slug:String {
         get {
             return _slug
@@ -50,10 +54,19 @@ class CategoryVC: UIViewController {
             print(response.response) // URL response
             print(response.data)     // server data
             print(response.result)   // result of response serialization
+            print("JSON: \(response.result.value)")
             
             if let JSON = response.result.value as? Dictionary<String, AnyObject> {
                 if let name = JSON["name"] as? String {
                     self.categoryTitleLabel.text = name
+                }
+                
+                if let recipesCount = JSON["recipes_count"] as? Int {
+                    self.totalRecipesCount.text = "\(recipesCount)"
+                }
+                
+                if let description = JSON["description"] as? String {
+                    self.descriptionView.text = description
                 }
             }
         }
