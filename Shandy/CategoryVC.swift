@@ -14,8 +14,8 @@ class CategoryVC: UIViewController {
     private var _slug: String!
     
     @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var descriptionView: UITextView!
     @IBOutlet weak var totalRecipesCount: UILabel!
+    @IBOutlet weak var descriptionView: UITextView!
     
     var slug:String {
         get {

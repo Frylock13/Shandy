@@ -118,54 +118,67 @@
                                     <constraint firstAttribute="height" constant="90" id="THl-Eg-h9y"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="oiW-9m-ytK">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oiW-9m-ytK">
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0sh-gJ-DNB">
-                                        <frame key="frameInset" minX="3.3333333333332575" minY="68" width="374" height="207.99999999999997"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cocktails-icon" translatesAutoresizingMaskIntoConstraints="NO" id="3f6-mH-PjI">
-                                        <frame key="frameInset" minX="8" minY="276" width="36" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total recipes: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlF-1G-rrU">
-                                        <frame key="frameInset" minX="52" minY="291" width="107" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="666" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWV-nN-9pY">
-                                        <frame key="frameInset" minX="159" minY="291" width="32" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0A-a5-ft1">
                                         <frame key="frameInset" minX="131" minY="8" width="121" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
                                         <color key="textColor" red="0.36078431372549019" green="0.23137254901960785" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddn-gS-tSt">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddn-gS-tSt">
                                         <frame key="frameInset" minX="8" minY="339" width="366" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.52156862745098043" green="0.38039215686274508" blue="0.63921568627450975" alpha="0.76950431034482758" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <state key="normal" title="Show random recipes">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="0.76950431034482758" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="J0R-h8-f3f">
+                                        <frame key="frameInset" minX="8" minY="265" width="203" height="36"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cocktails-icon" translatesAutoresizingMaskIntoConstraints="NO" id="3f6-mH-PjI">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="36" id="JZJ-YD-z6F"/>
+                                                    <constraint firstAttribute="height" constant="36" id="TsI-av-3WX"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total recipes: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlF-1G-rrU">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="666" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWV-nN-9pY">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="8dW-2u-4ai"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YQV-sB-Fxo">
+                                        <frame key="frameInset" minX="8" minY="62" width="366" height="195"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.76950431034482758" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="x0A-a5-ft1" firstAttribute="top" secondItem="oiW-9m-ytK" secondAttribute="top" constant="8" id="0mF-in-9UG"/>
+                                    <constraint firstItem="ddn-gS-tSt" firstAttribute="top" secondItem="J0R-h8-f3f" secondAttribute="bottom" constant="38" id="7Z3-c6-laU"/>
                                     <constraint firstItem="x0A-a5-ft1" firstAttribute="centerX" secondItem="oiW-9m-ytK" secondAttribute="centerX" id="Dcb-ky-8kg"/>
+                                    <constraint firstItem="ddn-gS-tSt" firstAttribute="leading" secondItem="oiW-9m-ytK" secondAttribute="leading" constant="8" id="FpC-Im-AkR"/>
+                                    <constraint firstItem="J0R-h8-f3f" firstAttribute="leading" secondItem="oiW-9m-ytK" secondAttribute="leading" constant="8" id="GEb-pq-8Cv"/>
+                                    <constraint firstAttribute="trailing" secondItem="ddn-gS-tSt" secondAttribute="trailing" constant="8" id="IZV-KW-Z8n"/>
+                                    <constraint firstAttribute="bottom" secondItem="ddn-gS-tSt" secondAttribute="bottom" id="SyV-VL-XEd"/>
+                                    <constraint firstItem="YQV-sB-Fxo" firstAttribute="top" secondItem="x0A-a5-ft1" secondAttribute="bottom" constant="33" id="Xyh-nA-WNU"/>
+                                    <constraint firstItem="YQV-sB-Fxo" firstAttribute="leading" secondItem="oiW-9m-ytK" secondAttribute="leading" constant="8" id="b9H-Ao-bCz"/>
+                                    <constraint firstItem="J0R-h8-f3f" firstAttribute="top" secondItem="YQV-sB-Fxo" secondAttribute="bottom" constant="8" id="tyi-PP-0Oe"/>
+                                    <constraint firstAttribute="trailing" secondItem="YQV-sB-Fxo" secondAttribute="trailing" constant="8" id="xUV-UM-kLl"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePq-w5-Yod">
@@ -208,7 +221,7 @@
                     <connections>
                         <outlet property="categoryTitleLabel" destination="x0A-a5-ft1" id="zNF-2R-dcp"/>
                         <outlet property="contentView" destination="oiW-9m-ytK" id="t0Y-pe-EBY"/>
-                        <outlet property="descriptionView" destination="0sh-gJ-DNB" id="dPU-36-5hL"/>
+                        <outlet property="descriptionView" destination="YQV-sB-Fxo" id="KiV-Kz-1ha"/>
                         <outlet property="totalRecipesCount" destination="cWV-nN-9pY" id="GDK-f8-xPW"/>
                     </connections>
                 </viewController>
