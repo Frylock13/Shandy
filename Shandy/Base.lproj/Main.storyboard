@@ -219,9 +219,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="categoryTitleLabel" destination="x0A-a5-ft1" id="zNF-2R-dcp"/>
                         <outlet property="contentView" destination="oiW-9m-ytK" id="t0Y-pe-EBY"/>
                         <outlet property="descriptionView" destination="YQV-sB-Fxo" id="KiV-Kz-1ha"/>
+                        <outlet property="titleLabel" destination="x0A-a5-ft1" id="3cc-gN-QS4"/>
                         <outlet property="totalRecipesCount" destination="cWV-nN-9pY" id="GDK-f8-xPW"/>
                     </connections>
                 </viewController>

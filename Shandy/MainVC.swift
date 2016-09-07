@@ -45,7 +45,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? CategoryVC {
             let currentCell = tableView.indexPathForSelectedRow?.row
-            destination.slug = categories[currentCell!].slug
+            destination.category = categories[currentCell!]
         }
     }
     

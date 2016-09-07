@@ -11,22 +11,21 @@ import Alamofire
 
 class CategoryVC: UIViewController {
     
-    private var _slug: String!
+    private var _category: Category!
     
-    @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var totalRecipesCount: UILabel!
-    @IBOutlet weak var descriptionView: UITextView!
-    
-    var slug:String {
+    var category: Category {
         get {
-            return _slug
+            return _category
         }
         set {
-            _slug = newValue
+            _category = newValue
         }
     }
     
-    @IBOutlet weak var categoryTitleLabel: UILabel!
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var totalRecipesCount: UILabel!
+    @IBOutlet weak var descriptionView: UITextView!
     
     @IBAction func backButtonPressed(_ sender: AnyObject) {
         dismiss(animated: true, completion: nil)
@@ -34,41 +33,12 @@ class CategoryVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        getJSONAndUpdateUI()
-    }
-    
-    func getJSONAndUpdateUI() {
-
-        let categoryPath = "\(BASE_URL)categories/\(slug).json"
-        let categoryUrl = URL(string: categoryPath)!
-        
-        Alamofire.request(categoryUrl).responseJSON { response in
-            debugPrint(response)     // prints detailed description of all response properties
-            
-            print(response.request)  // original URL request
-            print(response.response) // URL response
-            print(response.data)     // server data
-            print(response.result)   // result of response serialization
-            print("JSON: \(response.result.value)")
-            
-            if let JSON = response.result.value as? Dictionary<String, AnyObject> {
-                if let name = JSON["name"] as? String {
-                    self.categoryTitleLabel.text = name
-                }
-                
-                if let recipesCount = JSON["recipes_count"] as? Int {
-                    self.totalRecipesCount.text = "\(recipesCount)"
-                }
-                
-                if let description = JSON["description"] as? String {
-                    self.descriptionView.text = description
-                }
-            }
-        }
+    private func updateUI() {
+        titleLabel.text = _category.title
+        totalRecipesCount.text = _category.recipesCount
+        descriptionView.text = _category.description
     }
 }
