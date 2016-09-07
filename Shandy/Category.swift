@@ -13,7 +13,7 @@ class Category {
     private var _imageName: String!
     private var _title: String!
     private var _slug: String!
- 
+    
     var imageName: String {
         return _imageName
     }
@@ -26,7 +26,7 @@ class Category {
         return _slug
     }
     
-    init(imageName: String, title: String, slug: String) {
+    init(title: String, slug: String) {
         _imageName = "\(slug).jpg"
         _title = title
         _slug = slug

@@ -43,11 +43,11 @@ class CategoryVC: UIViewController {
     }
     
     func getJSONAndUpdateUI() {
-        //categoryTitleLabel.text = currentCategory.name
+
         let categoryPath = "\(BASE_URL)categories/\(slug).json"
         let categoryUrl = URL(string: categoryPath)!
         
-        Alamofire.request(categoryUrl, withMethod: .get).responseJSON { response in
+        Alamofire.request(categoryUrl).responseJSON { response in
             debugPrint(response)     // prints detailed description of all response properties
             
             print(response.request)  // original URL request

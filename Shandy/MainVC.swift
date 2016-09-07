@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -17,32 +18,23 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let c1 = Category(imageName: "beer.jpg", title: "Beer", slug: "beer")
-        let c2 = Category(imageName: "cocktails.jpg", title: "Cocktails", slug: "cocktails")
-        let c3 = Category(imageName: "cocoa.jpg", title: "Cocoa", slug: "cocoa")
-        let c4 = Category(imageName: "coffee-tea.jpg", title: "Coffee/Tea", slug: "coffee-tea")
-        let c5 = Category(imageName: "liqueur.jpg", title: "Homemade Liqueur", slug: "homemade-liqueur")
-        let c6 = Category(imageName: "milk-shake.jpg", title: "Milk / Float / Shake", slug: "milk-shake")
-        let c7 = Category(imageName: "ordinary.jpg", title: "Ordinary Drink", slug: "ordinary")
-        let c8 = Category(imageName: "punch-party-drink.jpg", title: "Punch / Party Drink", slug: "punch-party-drink")
-        let c9 = Category(imageName: "shot.jpg", title: "Shot", slug: "shot")
-        let c10 = Category(imageName: "soft-drink-soda.jpg", title: "Soft Drink / Soda", slug: "soft-drink-soda")
-        let c11 = Category(imageName: "other.jpg", title: "Other", slug: "other")
-        
-        categories.append(c1)
-        categories.append(c2)
-        categories.append(c3)
-        categories.append(c4)
-        categories.append(c5)
-        categories.append(c6)
-        categories.append(c7)
-        categories.append(c8)
-        categories.append(c9)
-        categories.append(c10)
-        categories.append(c11)
+        let c1 = Category(title: "Beer", slug: "beer")
+        let c2 = Category(title: "Cocktails", slug: "cocktails")
+        let c3 = Category(title: "Cocoa", slug: "cocoa")
+        let c4 = Category(title: "Coffee/Tea", slug: "coffee-tea")
+        let c5 = Category(title: "Homemade Liqueur", slug: "homemade-liqueur")
+        let c6 = Category(title: "Milk / Float / Shake", slug: "milk-shake")
+        let c7 = Category(title: "Ordinary Drink", slug: "ordinary")
+        let c8 = Category(title: "Punch / Party Drink", slug: "punch-party-drink")
+        let c9 = Category(title: "Shot", slug: "shot")
+        let c10 = Category(title: "Soft Drink / Soda", slug: "soft-drink-soda")
+        let c11 = Category(title: "Other", slug: "other")
+
+        downloadCategoriesData()
         
         tableView.delegate = self
         tableView.dataSource = self
+        
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -68,6 +60,37 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             let currentCell = tableView.indexPathForSelectedRow?.row
             destination.slug = categories[currentCell!].slug
         }
+    }
+    
+    func downloadCategoriesData() {
+        
+        let categoriesPath = "\(BASE_URL)categories.json"
+        let categoriesUrl = URL(string: categoriesPath)!
+        
+        Alamofire.request(categoriesUrl).responseJSON { response in
+            debugPrint(response)     // prints detailed description of all response properties
+            
+            print(response.request)  // original URL request
+            print(response.response) // URL response
+            print(response.data)     // server data
+            print(response.result)   // result of response serialization
+            print("JSON: \(response.result.value)")
+            
+            if let categoriesArray = response.result.value as? NSArray {
+                for categoryDict in categoriesArray {
+                    if let categoryDict = categoryDict as? NSDictionary {
+                        //print("title: \(categoryDict["name"]!), slug: \(categoryDict["slug"]!)")
+                        let category = Category(title: "\(categoryDict["name"]!)", slug: "\(categoryDict["slug"]!)")
+                        self.categories.append(category)
+                        self.tableView.reloadData()
+                    }
+                }
+            }
+        }
+    }
+    
+    private func appendCategoriesFromArray(array: NSArray) {
+        
     }
 }
 
