@@ -17,24 +17,11 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let c1 = Category(title: "Beer", slug: "beer")
-        let c2 = Category(title: "Cocktails", slug: "cocktails")
-        let c3 = Category(title: "Cocoa", slug: "cocoa")
-        let c4 = Category(title: "Coffee/Tea", slug: "coffee-tea")
-        let c5 = Category(title: "Homemade Liqueur", slug: "homemade-liqueur")
-        let c6 = Category(title: "Milk / Float / Shake", slug: "milk-shake")
-        let c7 = Category(title: "Ordinary Drink", slug: "ordinary")
-        let c8 = Category(title: "Punch / Party Drink", slug: "punch-party-drink")
-        let c9 = Category(title: "Shot", slug: "shot")
-        let c10 = Category(title: "Soft Drink / Soda", slug: "soft-drink-soda")
-        let c11 = Category(title: "Other", slug: "other")
 
         downloadCategoriesData()
         
         tableView.delegate = self
         tableView.dataSource = self
-        
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -80,7 +67,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 for categoryDict in categoriesArray {
                     if let categoryDict = categoryDict as? NSDictionary {
                         //print("title: \(categoryDict["name"]!), slug: \(categoryDict["slug"]!)")
-                        let category = Category(title: "\(categoryDict["name"]!)", slug: "\(categoryDict["slug"]!)")
+                        let category = Category(title: "\(categoryDict["name"]!)", slug: "\(categoryDict["slug"]!)", description: "\(categoryDict["description"]!)", recipesCount: "\(categoryDict["recipes_count"]!)")
                         self.categories.append(category)
                         self.tableView.reloadData()
                     }

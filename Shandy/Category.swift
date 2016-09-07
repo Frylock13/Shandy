@@ -13,6 +13,8 @@ class Category {
     private var _imageName: String!
     private var _title: String!
     private var _slug: String!
+    private var _description: String!
+    private var _recipesCount: String!
     
     var imageName: String {
         return _imageName
@@ -26,9 +28,19 @@ class Category {
         return _slug
     }
     
-    init(title: String, slug: String) {
+    var description: String {
+        return _description
+    }
+    
+    var recipesCount: String {
+        return _recipesCount
+    }
+    
+    init(title: String, slug: String, description: String, recipesCount: String) {
         _imageName = "\(slug).jpg"
         _title = title
         _slug = slug
+        _description = description
+        _recipesCount = recipesCount
     }
 }
