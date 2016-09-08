@@ -20,6 +20,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
         downloadCategoriesData()
         
+        self.navigationItem.title = "Cocktails"
+        
         tableView.delegate = self
         tableView.dataSource = self
     }

@@ -18,6 +18,7 @@
 		FE4E8C231D7592EE0013E347 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E8C221D7592EE0013E347 /* CategoryVC.swift */; };
 		FE51A2341D797F9400EE855D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = FE51A2331D797F9400EE855D /* Podfile */; };
 		FE51A2361D7A4CA900EE855D /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE51A2351D7A4CA900EE855D /* Contants.swift */; };
+		FE5914561D80F7D000982FEC /* PurpleNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5914551D80F7D000982FEC /* PurpleNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		FE4E8C221D7592EE0013E347 /* CategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
 		FE51A2331D797F9400EE855D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FE51A2351D7A4CA900EE855D /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
+		FE5914551D80F7D000982FEC /* PurpleNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurpleNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				FE16F2DA1D71E75500B1358D /* CategoryCell.swift */,
+				FE5914551D80F7D000982FEC /* PurpleNavigationController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -162,7 +165,8 @@
 				TargetAttributes = {
 					FE16F29F1D70D82500B1358D = {
 						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = KDRP875ULK;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -254,6 +258,7 @@
 				FE4E8C231D7592EE0013E347 /* CategoryVC.swift in Sources */,
 				FE16F2A61D70D82500B1358D /* MainVC.swift in Sources */,
 				FE16F2DD1D71E92400B1358D /* Category.swift in Sources */,
+				FE5914561D80F7D000982FEC /* PurpleNavigationController.swift in Sources */,
 				FE16F2A41D70D82500B1358D /* AppDelegate.swift in Sources */,
 				FE16F2DB1D71E75500B1358D /* CategoryCell.swift in Sources */,
 				FE51A2361D7A4CA900EE855D /* Contants.swift in Sources */,
@@ -380,7 +385,8 @@
 			baseConfigurationReference = 906513487E8BF7DA5C5F5DA1 /* Pods-Shandy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = KDRP875ULK;
 				INFOPLIST_FILE = Shandy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.Shandy";
@@ -394,7 +400,8 @@
 			baseConfigurationReference = 6DF8F2D9DD8BDF70B981365A /* Pods-Shandy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = KDRP875ULK;
 				INFOPLIST_FILE = Shandy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.Shandy";
