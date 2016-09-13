@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		43B2C2E535570D5CFDC5B56D /* Pods_Shandy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AADC8EBB6D2DCB520F6739 /* Pods_Shandy.framework */; };
 		FE16F2A41D70D82500B1358D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16F2A31D70D82500B1358D /* AppDelegate.swift */; };
-		FE16F2A61D70D82500B1358D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16F2A51D70D82500B1358D /* MainVC.swift */; };
+		FE16F2A61D70D82500B1358D /* CategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16F2A51D70D82500B1358D /* CategoriesVC.swift */; };
 		FE16F2A91D70D82500B1358D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE16F2A71D70D82500B1358D /* Main.storyboard */; };
 		FE16F2AB1D70D82500B1358D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE16F2AA1D70D82500B1358D /* Assets.xcassets */; };
 		FE16F2AE1D70D82500B1358D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE16F2AC1D70D82500B1358D /* LaunchScreen.storyboard */; };
 		FE16F2DB1D71E75500B1358D /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16F2DA1D71E75500B1358D /* CategoryCell.swift */; };
 		FE16F2DD1D71E92400B1358D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16F2DC1D71E92400B1358D /* Category.swift */; };
+		FE3444E31D87971700A26CD6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3444E21D87971700A26CD6 /* MainViewController.swift */; };
 		FE4E8C231D7592EE0013E347 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E8C221D7592EE0013E347 /* CategoryVC.swift */; };
 		FE51A2341D797F9400EE855D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = FE51A2331D797F9400EE855D /* Podfile */; };
 		FE51A2361D7A4CA900EE855D /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE51A2351D7A4CA900EE855D /* Contants.swift */; };
@@ -27,13 +28,14 @@
 		906513487E8BF7DA5C5F5DA1 /* Pods-Shandy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shandy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shandy/Pods-Shandy.debug.xcconfig"; sourceTree = "<group>"; };
 		FE16F2A01D70D82500B1358D /* Shandy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shandy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE16F2A31D70D82500B1358D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE16F2A51D70D82500B1358D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		FE16F2A51D70D82500B1358D /* CategoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesVC.swift; sourceTree = "<group>"; };
 		FE16F2A81D70D82500B1358D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE16F2AA1D70D82500B1358D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE16F2AD1D70D82500B1358D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE16F2AF1D70D82500B1358D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE16F2DA1D71E75500B1358D /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		FE16F2DC1D71E92400B1358D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		FE3444E21D87971700A26CD6 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FE4E8C221D7592EE0013E347 /* CategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
 		FE51A2331D797F9400EE855D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FE51A2351D7A4CA900EE855D /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		FE16F2A21D70D82500B1358D /* Shandy */ = {
 			isa = PBXGroup;
 			children = (
+				FE3444E11D8796DB00A26CD6 /* Files */,
 				FE16F2D71D71E0BD00B1358D /* View */,
 				FE16F2D61D71E0B800B1358D /* Model */,
 				FE16F2D51D71E0A900B1358D /* Controller */,
@@ -107,8 +110,9 @@
 		FE16F2D51D71E0A900B1358D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FE16F2A51D70D82500B1358D /* MainVC.swift */,
+				FE16F2A51D70D82500B1358D /* CategoriesVC.swift */,
 				FE4E8C221D7592EE0013E347 /* CategoryVC.swift */,
+				FE3444E21D87971700A26CD6 /* MainViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -128,6 +132,13 @@
 				FE5914551D80F7D000982FEC /* PurpleNavigationController.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		FE3444E11D8796DB00A26CD6 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Files;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,12 +267,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE4E8C231D7592EE0013E347 /* CategoryVC.swift in Sources */,
-				FE16F2A61D70D82500B1358D /* MainVC.swift in Sources */,
+				FE16F2A61D70D82500B1358D /* CategoriesVC.swift in Sources */,
 				FE16F2DD1D71E92400B1358D /* Category.swift in Sources */,
 				FE5914561D80F7D000982FEC /* PurpleNavigationController.swift in Sources */,
 				FE16F2A41D70D82500B1358D /* AppDelegate.swift in Sources */,
 				FE16F2DB1D71E75500B1358D /* CategoryCell.swift in Sources */,
 				FE51A2361D7A4CA900EE855D /* Contants.swift in Sources */,
+				FE3444E31D87971700A26CD6 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

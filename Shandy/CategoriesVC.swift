@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CategoriesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var categories = [Category]()
     

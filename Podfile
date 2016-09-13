@@ -1,11 +1,9 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
+platform :ios, '10.0'
 use_frameworks!
 
 target 'Shandy' do
-pod 'Alamofire',
-    git: 'https://github.com/Alamofire/Alamofire.git',
-    branch: 'swift3'
+  pod 'Alamofire', '~> 4.0'
 end
 
 post_install do |installer|
