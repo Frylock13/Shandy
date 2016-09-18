@@ -40,8 +40,9 @@ class CategoriesVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         }
     }
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return categories.count
+        return categories.count
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

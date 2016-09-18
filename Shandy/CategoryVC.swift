@@ -27,7 +27,7 @@ class CategoryVC: UIViewController {
     @IBOutlet weak var totalRecipesCount: UILabel!
     @IBOutlet weak var descriptionView: UITextView!
     
-    @IBAction func backButtonPressed(_ sender: AnyObject) {
+    @IBAction func backButtonPressed(sender: AnyObject) {
         dismiss(animated: true, completion: nil)
     }
 

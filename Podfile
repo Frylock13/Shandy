@@ -3,7 +3,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target 'Shandy' do
-  pod 'Alamofire', '~> 4.0'
+  pod 'Alamofire', '~> 4.0'  
 end
 
 post_install do |installer|
