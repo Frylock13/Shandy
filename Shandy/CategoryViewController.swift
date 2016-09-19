@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class CategoryVC: UIViewController {
+class CategoryViewController: UIViewController {
     
     private var _category: Category!
     

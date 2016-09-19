@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class CategoriesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CategoriesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var categories = [Category]()
     
@@ -20,7 +20,7 @@ class CategoriesVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 
         downloadCategoriesData()
         
-        self.navigationItem.title = "Cocktails"
+        self.navigationItem.title = "Categories"
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -46,7 +46,7 @@ class CategoriesVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? CategoryVC {
+        if let destination = segue.destination as? CategoryViewController {
             let currentCell = tableView.indexPathForSelectedRow?.row
             destination.category = categories[currentCell!]
         }
