@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZfU-SX-VE8">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZfU-SX-VE8">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -22,10 +22,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="73" id="Hhs-ta-gmV" customClass="CategoryCell" customModule="Shandy" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="73"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hhs-ta-gmV" id="nRM-GC-Z3o">
-                                            <frame key="frameInset" width="375" height="73"/>
+                                            <frame key="frameInset" width="375" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cocktails" translatesAutoresizingMaskIntoConstraints="NO" id="ddc-7a-Eb0">
@@ -76,24 +76,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1676" y="31"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Xmx-y6-bmj">
-            <objects>
-                <viewController id="dCw-lf-P9p" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5PW-T0-qVL"/>
-                        <viewControllerLayoutGuide type="bottom" id="NSf-5J-Zdv"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DhI-hZ-DDV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dZi-aT-jBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1458" y="723"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="PiY-Et-5cW">
@@ -228,7 +210,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZfU-SX-VE8" customClass="PurpleNavigationController" customModule="Shandy" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l3M-jQ-B3a">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="l3M-jQ-B3a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -253,46 +235,178 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UmJ-yS-ngz">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XU8-eI-ZPy">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="categories" translatesAutoresizingMaskIntoConstraints="NO" id="lEI-7f-idB">
-                                        <frame key="frameInset" minX="8" minY="5" width="70" height="70"/>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="0h9-7v-hZq">
-                                        <frame key="frameInset" minX="109" minY="8" width="75" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="DIs-L5-RDi" userLabel="Blocks">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOz-qr-omm">
-                                                <frame key="frameInset" width="75" height="30"/>
-                                                <state key="normal" title="Categories"/>
-                                                <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="show" id="Mdz-uc-liv"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k34-Lb-d83">
-                                                <frame key="frameInset" minY="30" width="29" height="14"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ems-jn-WRE">
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b73-ab-Ksi" userLabel="Categories" customClass="RoundedView" customModule="Shandy" customModuleProvider="target">
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="NeT-PS-Id7">
+                                                                <frame key="frameInset" minX="20" minY="17" width="80" height="98"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="categories" translatesAutoresizingMaskIntoConstraints="NO" id="iFb-RQ-9Kp">
+                                                                        <frame key="frameInset" minX="8" width="64" height="64"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="64" id="M6e-Uv-M1v"/>
+                                                                            <constraint firstAttribute="width" constant="64" id="aAF-Pu-uFP"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWv-fg-f5I">
+                                                                        <frame key="frameInset" minY="54" width="80" height="44"/>
+                                                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                                                        <state key="normal" title="Categories">
+                                                                            <color key="titleColor" red="0.043718779762122587" green="0.11081808519172376" blue="0.16687817258883253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </state>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="120" id="gWU-i0-ebP"/>
+                                                            <constraint firstAttribute="width" constant="120" id="jNZ-ar-Q2W"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vus-M7-gSK" userLabel="Ingredients" customClass="RoundedView" customModule="Shandy" customModuleProvider="target">
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="fb3-8c-rdd">
+                                                                <frame key="frameInset" minX="19" minY="17" width="82" height="98"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="ingredients" translatesAutoresizingMaskIntoConstraints="NO" id="CqT-jQ-X7k">
+                                                                        <frame key="frameInset" minX="9" width="64" height="64"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="64" id="47M-MH-Xd4"/>
+                                                                            <constraint firstAttribute="height" constant="64" id="is1-kl-1a7"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWv-MB-g4t">
+                                                                        <frame key="frameInset" minY="54" width="82" height="44"/>
+                                                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                                                        <state key="normal" title="Ingredients">
+                                                                            <color key="titleColor" red="0.04371877976" green="0.1108180852" blue="0.16687817260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </state>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="120" id="1t6-rN-Tyx"/>
+                                                            <constraint firstAttribute="height" constant="120" id="Gxn-w0-A0I"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="dm5-aM-PPI">
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iD8-3j-Z7Q" userLabel="Glasses" customClass="RoundedView" customModule="Shandy" customModuleProvider="target">
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="GDv-iu-CPn">
+                                                                <frame key="frameInset" minX="28" minY="17" width="64" height="98"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="glasses" translatesAutoresizingMaskIntoConstraints="NO" id="DQS-wG-h7D">
+                                                                        <frame key="frameInset" width="64" height="64"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="64" id="5MO-Kv-xZM"/>
+                                                                            <constraint firstAttribute="height" constant="64" id="ZdK-Wn-CzS"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eom-E7-tBr">
+                                                                        <frame key="frameInset" minX="3" minY="54" width="58" height="44"/>
+                                                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                                                        <state key="normal" title="Glasses">
+                                                                            <color key="titleColor" red="0.04371877976" green="0.1108180852" blue="0.16687817260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </state>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="120" id="sc6-2g-Clu"/>
+                                                            <constraint firstAttribute="height" constant="120" id="w3a-AU-4DB"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ee-rr-8kC" userLabel="Types" customClass="RoundedView" customModule="Shandy" customModuleProvider="target">
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="fwf-b0-atb">
+                                                                <frame key="frameInset" minX="28" minY="17" width="64" height="98"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="types" translatesAutoresizingMaskIntoConstraints="NO" id="SxS-LV-OkW">
+                                                                        <frame key="frameInset" width="64" height="64"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="64" id="eu1-Ux-bWc"/>
+                                                                            <constraint firstAttribute="width" constant="64" id="rGx-at-24m"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uW8-OR-Qrx">
+                                                                        <frame key="frameInset" minX="10" minY="54" width="44" height="44"/>
+                                                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                                                        <state key="normal" title="Types">
+                                                                            <color key="titleColor" red="0.04371877976" green="0.1108180852" blue="0.16687817260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </state>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="120" id="9E0-fV-6i8"/>
+                                                            <constraint firstAttribute="height" constant="120" id="sN9-Cl-BeD"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="jsE-e7-45K" userLabel="Glasses" customClass="RoundedView" customModule="Shandy" customModuleProvider="target">
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Lly-mL-Jq7">
+                                                        <frame key="frameInset" minX="34" minY="25" width="158" height="64"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="vEp-fn-3LA">
+                                                                <frame key="frameInset" width="64" height="64"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="64" id="8dR-jV-2lM"/>
+                                                                    <constraint firstAttribute="height" constant="64" id="mSD-4b-a3b"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPw-zM-Iiz">
+                                                                <frame key="frameInset" minX="94" minY="10" width="64" height="44"/>
+                                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                                                <state key="normal" title="Search">
+                                                                    <color key="titleColor" red="0.04371877976" green="0.1108180852" blue="0.16687817260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="Tn8-ow-Kkj"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.070588235294117646" green="0.19607843137254902" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="lEI-7f-idB" firstAttribute="centerY" secondItem="UmJ-yS-ngz" secondAttribute="centerY" id="LxC-Ie-iDg"/>
-                                    <constraint firstItem="lEI-7f-idB" firstAttribute="leading" secondItem="UmJ-yS-ngz" secondAttribute="leading" constant="8" id="Zb7-Lj-JJZ"/>
-                                    <constraint firstItem="lEI-7f-idB" firstAttribute="top" secondItem="UmJ-yS-ngz" secondAttribute="top" constant="5" id="dmw-oc-U0l"/>
-                                    <constraint firstAttribute="height" constant="80" id="qtC-6q-S0g"/>
-                                    <constraint firstAttribute="bottom" secondItem="lEI-7f-idB" secondAttribute="bottom" constant="5" id="tSd-PB-GD2"/>
+                                    <constraint firstItem="DIs-L5-RDi" firstAttribute="centerY" secondItem="XU8-eI-ZPy" secondAttribute="centerY" id="dHW-Lx-957"/>
+                                    <constraint firstItem="DIs-L5-RDi" firstAttribute="centerX" secondItem="XU8-eI-ZPy" secondAttribute="centerX" id="gL7-C5-7Da"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="UmJ-yS-ngz" secondAttribute="trailing" id="PDP-c6-G7f"/>
-                            <constraint firstItem="UmJ-yS-ngz" firstAttribute="top" secondItem="d2W-4g-iuj" secondAttribute="bottom" id="UfX-3A-Q0z"/>
-                            <constraint firstItem="UmJ-yS-ngz" firstAttribute="leading" secondItem="zr6-uL-jd6" secondAttribute="leading" id="aXD-cd-fqW"/>
+                            <constraint firstItem="XU8-eI-ZPy" firstAttribute="top" secondItem="d2W-4g-iuj" secondAttribute="bottom" id="3rc-ov-xoF"/>
+                            <constraint firstAttribute="trailing" secondItem="XU8-eI-ZPy" secondAttribute="trailing" id="VRv-yj-Uag"/>
+                            <constraint firstItem="XU8-eI-ZPy" firstAttribute="leading" secondItem="zr6-uL-jd6" secondAttribute="leading" id="u13-UX-5J6"/>
+                            <constraint firstItem="UCh-m0-ofx" firstAttribute="top" secondItem="XU8-eI-ZPy" secondAttribute="bottom" id="x9E-wx-d4F"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cocktails" id="a1j-bw-Ez4"/>
@@ -301,14 +415,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t2G-js-CCd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="946.39999999999998" y="28.335832083958024"/>
+            <point key="canvasLocation" x="892" y="28.335832083958024"/>
         </scene>
     </scenes>
     <resources>
-        <image name="categories" width="85" height="85"/>
+        <image name="categories" width="64" height="64"/>
         <image name="cocktails" width="1095" height="300"/>
         <image name="cocktails-icon" width="88" height="88"/>
+        <image name="glasses" width="64" height="64"/>
         <image name="hamburger" width="24" height="24"/>
+        <image name="ingredients" width="64" height="64"/>
         <image name="logo" width="370" height="192"/>
+        <image name="search" width="64" height="64"/>
+        <image name="types" width="64" height="64"/>
     </resources>
 </document>
