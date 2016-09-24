@@ -18,7 +18,7 @@ class CategoriesViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        downloadCategoriesData()
+        downloadCategoriesDataFromJson()
         
         self.navigationItem.title = "Categories"
         
@@ -52,35 +52,28 @@ class CategoriesViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
-    func downloadCategoriesData() {
+    func downloadCategoriesDataFromJson() {
         
         let categoriesPath = "\(BASE_URL)categories.json"
         let categoriesUrl = URL(string: categoriesPath)!
         
         Alamofire.request(categoriesUrl).responseJSON { response in
             debugPrint(response)     // prints detailed description of all response properties
-            
-            print(response.request)  // original URL request
-            print(response.response) // URL response
-            print(response.data)     // server data
-            print(response.result)   // result of response serialization
+
             print("JSON: \(response.result.value)")
             
-            if let categoriesArray = response.result.value as? NSArray {
-                for categoryDict in categoriesArray {
-                    if let categoryDict = categoryDict as? NSDictionary {
-                        //print("title: \(categoryDict["name"]!), slug: \(categoryDict["slug"]!)")
-                        let category = Category(title: "\(categoryDict["name"]!)", slug: "\(categoryDict["slug"]!)", description: "\(categoryDict["description"]!)", recipesCount: "\(categoryDict["recipes_count"]!)")
-                        self.categories.append(category)
-                        self.tableView.reloadData()
-                    }
-                }
-            }
+            self.addCategoriesToAnArray(array: response.result.value as! NSArray)
         }
     }
     
-    private func appendCategoriesFromArray(array: NSArray) {
-        
+    private func addCategoriesToAnArray(array: NSArray) {
+        for categoryDict in array {
+            if let categoryDict = categoryDict as? NSDictionary {
+                let category = Category(title: "\(categoryDict["name"]!)", slug: "\(categoryDict["slug"]!)", description: "\(categoryDict["description"]!)", recipesCount: "\(categoryDict["recipes_count"]!)")
+                self.categories.append(category)
+                self.tableView.reloadData()
+            }
+        }
     }
 }
 

@@ -22,35 +22,44 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="73" id="Hhs-ta-gmV" customClass="CategoryCell" customModule="Shandy" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="73"/>
+                                        <rect key="frame" x="0.0" y="92" width="375" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hhs-ta-gmV" id="nRM-GC-Z3o">
                                             <frame key="frameInset" width="375" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cocktails" translatesAutoresizingMaskIntoConstraints="NO" id="ddc-7a-Eb0">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beer" translatesAutoresizingMaskIntoConstraints="NO" id="ddc-7a-Eb0">
                                                     <color key="backgroundColor" white="1" alpha="0.73440193965517242" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="64" id="5EW-Kb-fhV"/>
+                                                        <constraint firstAttribute="width" constant="64" id="f9j-ht-uNR"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcM-0E-W3S">
-                                                    <frame key="frameInset" minY="21" width="414" height="30"/>
-                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="29"/>
-                                                    <size key="titleShadowOffset" width="1" height="1"/>
-                                                    <state key="normal" title="Category">
-                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="titleShadowColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcM-0E-W3S">
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="25"/>
+                                                    <state key="normal" title="Beer">
+                                                        <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" red="0.5" green="0.0" blue="0.5" alpha="0.0" colorSpace="calibratedRGB"/>
                                                     </state>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Recipes: 66" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6D-Hd-SyZ">
+                                                    <frame key="frameInset" minX="158" minY="41" width="59" height="21"/>
+                                                    <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="13"/>
+                                                    <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ddc-7a-Eb0" firstAttribute="top" secondItem="nRM-GC-Z3o" secondAttribute="top" id="3zs-be-gup"/>
-                                                <constraint firstItem="CcM-0E-W3S" firstAttribute="centerX" secondItem="nRM-GC-Z3o" secondAttribute="centerX" id="Q8k-5r-TKU"/>
-                                                <constraint firstItem="ddc-7a-Eb0" firstAttribute="leading" secondItem="nRM-GC-Z3o" secondAttribute="leading" id="XNC-nC-kLQ"/>
-                                                <constraint firstAttribute="bottom" secondItem="ddc-7a-Eb0" secondAttribute="bottom" id="jcw-kk-6oi"/>
-                                                <constraint firstAttribute="trailing" secondItem="ddc-7a-Eb0" secondAttribute="trailing" id="qnb-vo-ykP"/>
-                                                <constraint firstItem="CcM-0E-W3S" firstAttribute="centerY" secondItem="nRM-GC-Z3o" secondAttribute="centerY" id="sUs-rS-WJU"/>
+                                                <constraint firstItem="ddc-7a-Eb0" firstAttribute="centerY" secondItem="nRM-GC-Z3o" secondAttribute="centerY" id="1K7-LK-Z5i"/>
+                                                <constraint firstItem="CcM-0E-W3S" firstAttribute="top" secondItem="nRM-GC-Z3o" secondAttribute="top" id="5Ai-3f-SgT"/>
+                                                <constraint firstItem="e6D-Hd-SyZ" firstAttribute="top" secondItem="nRM-GC-Z3o" secondAttribute="top" constant="40" id="CEA-E0-yVW"/>
+                                                <constraint firstItem="e6D-Hd-SyZ" firstAttribute="centerX" secondItem="nRM-GC-Z3o" secondAttribute="centerX" id="Oli-Qd-NtI"/>
+                                                <constraint firstItem="CcM-0E-W3S" firstAttribute="centerX" secondItem="nRM-GC-Z3o" secondAttribute="centerX" id="OqR-Ix-p0g"/>
+                                                <constraint firstItem="CcM-0E-W3S" firstAttribute="leading" secondItem="ddc-7a-Eb0" secondAttribute="trailing" constant="8" id="vEC-EM-0nj"/>
+                                                <constraint firstItem="ddc-7a-Eb0" firstAttribute="leading" secondItem="nRM-GC-Z3o" secondAttribute="leading" constant="8" id="vuV-PE-Dgk"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.36078431372549019" green="1" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="categoryImage" destination="ddc-7a-Eb0" id="9lT-us-hB8"/>
                                             <outlet property="categoryName" destination="CcM-0E-W3S" id="3Fs-Dn-bFU"/>
@@ -75,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676" y="31"/>
+            <point key="canvasLocation" x="1676" y="30.134932533733135"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="PiY-Et-5cW">
@@ -210,7 +219,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZfU-SX-VE8" customClass="PurpleNavigationController" customModule="Shandy" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="l3M-jQ-B3a">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l3M-jQ-B3a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -260,6 +269,9 @@
                                                                         <state key="normal" title="Categories">
                                                                             <color key="titleColor" red="0.043718779762122587" green="0.11081808519172376" blue="0.16687817258883253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <segue destination="BYZ-38-t0r" kind="show" id="H9N-Hf-4tj"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -419,6 +431,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="beer" width="70" height="65"/>
         <image name="categories" width="64" height="64"/>
         <image name="cocktails" width="1095" height="300"/>
         <image name="cocktails-icon" width="88" height="88"/>
