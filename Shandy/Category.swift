@@ -10,16 +10,11 @@ import Foundation
 
 class Category {
     
-    private var _imageName: String!
     private var _title: String!
     private var _slug: String!
     private var _description: String!
     private var _recipesCount: String!
     private var _thumbUrl: String!
-    
-    var imageName: String {
-        return _imageName
-    }
     
     var title: String {
         return _title
@@ -42,7 +37,6 @@ class Category {
     }
     
     init(title: String, slug: String, description: String, recipesCount: String, thumbUrl: String) {
-        _imageName = "\(slug).jpg"
         _title = title
         _slug = slug
         _description = description

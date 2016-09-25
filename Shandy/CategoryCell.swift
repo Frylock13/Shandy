@@ -16,23 +16,19 @@ class CategoryCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
     }
 
     func updateUI(category: Category) {
-        //let preparedImage = UIImage(named: category.imageName)
         
         let thumbUrl = URL(string: category.thumbUrl)
         downloadImage(url: thumbUrl!)
         
         categoryName.setTitle(category.title, for: UIControlState.normal)
         recipesCount.text = category.recipesCount
-        //categoryImage.image = preparedImage
     }
     
     func downloadImage(url: URL) {
