@@ -25,10 +25,32 @@ class CategoryCell: UITableViewCell {
     }
 
     func updateUI(category: Category) {
-        let preparedImage = UIImage(named: category.imageName)
+        //let preparedImage = UIImage(named: category.imageName)
+        
+        let thumbUrl = URL(string: category.thumbUrl)
+        downloadImage(url: thumbUrl!)
         
         categoryName.setTitle(category.title, for: UIControlState.normal)
         recipesCount.text = category.recipesCount
-        categoryImage.image = preparedImage
+        //categoryImage.image = preparedImage
+    }
+    
+    func downloadImage(url: URL) {
+        print("Download Started")
+        getDataFromUrl(url: url) { (data, response, error)  in
+            DispatchQueue.main.sync() { () -> Void in
+                guard let data = data, error == nil else { return }
+                print(response?.suggestedFilename ?? url.lastPathComponent)
+                print("Download Finished")
+                self.categoryImage.image = UIImage(data: data)
+            }
+        }
+    }
+    
+    func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
+        URLSession.shared.dataTask(with: url) {
+            (data, response, error) in
+            completion(data, response, error)
+            }.resume()
     }
 }
