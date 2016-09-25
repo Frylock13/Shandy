@@ -12,6 +12,7 @@ class CategoryCell: UITableViewCell {
 
     @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var categoryName: UIButton!
+    @IBOutlet weak var recipesCount: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,6 +28,7 @@ class CategoryCell: UITableViewCell {
         let preparedImage = UIImage(named: category.imageName)
         
         categoryName.setTitle(category.title, for: UIControlState.normal)
+        recipesCount.text = category.recipesCount
         categoryImage.image = preparedImage
     }
 }
