@@ -20,6 +20,9 @@
 		FE4E8C231D7592EE0013E347 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E8C221D7592EE0013E347 /* CategoryViewController.swift */; };
 		FE51A2341D797F9400EE855D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = FE51A2331D797F9400EE855D /* Podfile */; };
 		FE51A2361D7A4CA900EE855D /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE51A2351D7A4CA900EE855D /* Contants.swift */; };
+		FEDE3D9A1D998DE00055B991 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDE3D991D998DE00055B991 /* Main.storyboard */; };
+		FEDE3D9C1D99B7180055B991 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE3D9B1D99B7180055B991 /* RecipeCell.swift */; };
+		FEDE3D9E1D99B9120055B991 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDE3D9D1D99B9120055B991 /* Recipe.swift */; };
 		FEF59B001D9866AB00EBA73E /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF59AFF1D9866AB00EBA73E /* RecipesViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +44,9 @@
 		FE4E8C221D7592EE0013E347 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		FE51A2331D797F9400EE855D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FE51A2351D7A4CA900EE855D /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
+		FEDE3D991D998DE00055B991 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FEDE3D9B1D99B7180055B991 /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		FEDE3D9D1D99B9120055B991 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		FEF59AFF1D9866AB00EBA73E /* RecipesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +110,7 @@
 				FE16F2AC1D70D82500B1358D /* LaunchScreen.storyboard */,
 				FE16F2AF1D70D82500B1358D /* Info.plist */,
 				FE51A2351D7A4CA900EE855D /* Contants.swift */,
+				FEDE3D991D998DE00055B991 /* Main.storyboard */,
 			);
 			path = Shandy;
 			sourceTree = "<group>";
@@ -123,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				FE16F2DC1D71E92400B1358D /* Category.swift */,
+				FEDE3D9D1D99B9120055B991 /* Recipe.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -132,6 +140,7 @@
 			children = (
 				FE16F2DA1D71E75500B1358D /* CategoryCell.swift */,
 				FE2894451D93712800067738 /* RoundedView.swift */,
+				FEDE3D9B1D99B7180055B991 /* RecipeCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -208,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE2894421D93638300067738 /* NoteworthyLight.ttf in Resources */,
+				FEDE3D9A1D998DE00055B991 /* Main.storyboard in Resources */,
 				FE16F2AE1D70D82500B1358D /* LaunchScreen.storyboard in Resources */,
 				FE16F2AB1D70D82500B1358D /* Assets.xcassets in Resources */,
 				FE51A2341D797F9400EE855D /* Podfile in Resources */,
@@ -274,10 +284,12 @@
 				FE2894461D93712800067738 /* RoundedView.swift in Sources */,
 				FE16F2DD1D71E92400B1358D /* Category.swift in Sources */,
 				FE16F2A41D70D82500B1358D /* AppDelegate.swift in Sources */,
+				FEDE3D9C1D99B7180055B991 /* RecipeCell.swift in Sources */,
 				FE16F2DB1D71E75500B1358D /* CategoryCell.swift in Sources */,
 				FE51A2361D7A4CA900EE855D /* Contants.swift in Sources */,
 				FEF59B001D9866AB00EBA73E /* RecipesViewController.swift in Sources */,
 				FE3444E31D87971700A26CD6 /* MainViewController.swift in Sources */,
+				FEDE3D9E1D99B9120055B991 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
