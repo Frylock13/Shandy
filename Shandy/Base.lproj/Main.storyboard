@@ -81,7 +81,7 @@
                                             <outlet property="categoryImage" destination="ddc-7a-Eb0" id="9lT-us-hB8"/>
                                             <outlet property="categoryName" destination="CcM-0E-W3S" id="3Fs-Dn-bFU"/>
                                             <outlet property="recipesCount" destination="H92-Mx-P87" id="q4B-MT-gWG"/>
-                                            <segue destination="Itl-ZK-54e" kind="showDetail" identifier="toCategory" id="XWB-al-BIL"/>
+                                            <segue destination="pRq-Vc-xkr" kind="showDetail" identifier="toRecipes" id="XWK-ka-EAe"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -106,6 +106,24 @@
             </objects>
             <point key="canvasLocation" x="1674.6376811594205" y="29.755434782608699"/>
         </scene>
+        <!--Recipes View Controller-->
+        <scene sceneID="Jsu-ur-ZCS">
+            <objects>
+                <viewController id="pRq-Vc-xkr" customClass="RecipesViewController" customModule="Shandy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rvW-X2-CrS"/>
+                        <viewControllerLayoutGuide type="bottom" id="HUW-hO-d2d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vqC-Vg-cYp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LPe-d9-4Kc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1674" y="770"/>
+        </scene>
         <!--Category View Controller-->
         <scene sceneID="PiY-Et-5cW">
             <objects>
@@ -115,7 +133,7 @@
                         <viewControllerLayoutGuide type="bottom" id="RRW-fm-vbV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="19q-sl-7Gc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cocktails" translatesAutoresizingMaskIntoConstraints="NO" id="14g-T6-06E">
@@ -234,10 +252,10 @@
             </objects>
             <point key="canvasLocation" x="2883" y="28"/>
         </scene>
-        <!--Purple Navigation Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="B1P-do-jke">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZfU-SX-VE8" customClass="PurpleNavigationController" customModule="Shandy" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZfU-SX-VE8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="l3M-jQ-B3a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -456,7 +474,7 @@
         <image name="cocktails" width="1095" height="300"/>
         <image name="cocktails-icon" width="88" height="88"/>
         <image name="glasses" width="64" height="64"/>
-        <image name="hamburger" width="21" height="21"/>
+        <image name="hamburger" width="24" height="24"/>
         <image name="ingredients" width="64" height="64"/>
         <image name="logo" width="370" height="192"/>
         <image name="next" width="25" height="25"/>

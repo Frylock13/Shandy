@@ -46,7 +46,7 @@ class CategoriesViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? CategoryViewController {
+        if let destination = segue.destination as? RecipesViewController {
             let currentCell = tableView.indexPathForSelectedRow?.row
             destination.category = categories[currentCell!]
         }

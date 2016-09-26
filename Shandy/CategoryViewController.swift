@@ -26,10 +26,6 @@ class CategoryViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var totalRecipesCount: UILabel!
     @IBOutlet weak var descriptionView: UITextView!
-    
-    @IBAction func backButtonPressed(sender: AnyObject) {
-        dismiss(animated: true, completion: nil)
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
