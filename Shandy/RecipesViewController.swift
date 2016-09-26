@@ -12,7 +12,7 @@ class RecipesViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var _category: Category!
+    private(set) var _category: Category!
     
     var category: Category {
         get {
@@ -29,7 +29,7 @@ class RecipesViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.title = _category.title
+        self.navigationItem.title = _category.name
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -39,11 +39,6 @@ class RecipesViewController: UIViewController, UITableViewDelegate, UITableViewD
         recipes.append(c2)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -64,5 +59,9 @@ class RecipesViewController: UIViewController, UITableViewDelegate, UITableViewD
         } else {
             return UITableViewCell()
         }
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 130.0
     }
 }

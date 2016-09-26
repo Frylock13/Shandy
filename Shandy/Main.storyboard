@@ -120,6 +120,11 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XV2-yc-B36">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="RIM-Ke-Asj">
+                                    <rect key="frame" x="0.0" y="222" width="375" height="11"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" rowHeight="130" id="uC0-3H-Wix" customClass="RecipeCell" customModule="Shandy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="375" height="130"/>
@@ -156,7 +161,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="HUW-hO-d2d" firstAttribute="top" secondItem="XV2-yc-B36" secondAttribute="bottom" id="2e0-g4-DUM"/>
                             <constraint firstItem="XV2-yc-B36" firstAttribute="top" secondItem="vqC-Vg-cYp" secondAttribute="top" id="91R-YZ-o2W"/>

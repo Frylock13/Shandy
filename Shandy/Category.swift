@@ -10,14 +10,14 @@ import Foundation
 
 class Category {
     
-    private var _title: String!
+    private var _name: String!
     private var _slug: String!
     private var _description: String!
     private var _recipesCount: String!
     private var _thumbUrl: String!
     
-    var title: String {
-        return _title
+    var name: String {
+        return _name
     }
     
     var slug: String {
@@ -36,8 +36,8 @@ class Category {
         return _thumbUrl
     }
     
-    init(title: String, slug: String, description: String, recipesCount: String, thumbUrl: String) {
-        _title = title
+    init(name: String, slug: String, description: String, recipesCount: String, thumbUrl: String) {
+        _name = name
         _slug = slug
         _description = description
         _recipesCount = recipesCount

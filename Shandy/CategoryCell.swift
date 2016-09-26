@@ -27,7 +27,7 @@ class CategoryCell: UITableViewCell {
         let thumbUrl = URL(string: category.thumbUrl)
         downloadImage(url: thumbUrl!)
         
-        categoryName.setTitle(category.title, for: UIControlState.normal)
+        categoryName.setTitle(category.name, for: UIControlState.normal)
         recipesCount.text = category.recipesCount
     }
     

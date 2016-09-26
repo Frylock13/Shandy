@@ -33,7 +33,7 @@ class CategoryViewController: UIViewController {
     }
     
     private func updateUI() {
-        titleLabel.text = _category.title
+        titleLabel.text = _category.name
         totalRecipesCount.text = _category.recipesCount
         descriptionView.text = _category.description
     }

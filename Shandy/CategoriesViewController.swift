@@ -69,7 +69,7 @@ class CategoriesViewController: UIViewController, UITableViewDelegate, UITableVi
     private func addCategoriesToAnArray(array: NSArray) {
         for categoryDict in array {
             if let categoryDict = categoryDict as? NSDictionary {
-                let category = Category(title: "\(categoryDict["name"]!)", slug: "\(categoryDict["slug"]!)", description: "\(categoryDict["description"]!)", recipesCount: "\(categoryDict["recipes_count"]!)", thumbUrl: "\(categoryDict["thumb_url"]!)")
+                let category = Category(name: "\(categoryDict["name"]!)", slug: "\(categoryDict["slug"]!)", description: "\(categoryDict["description"]!)", recipesCount: "\(categoryDict["recipes_count"]!)", thumbUrl: "\(categoryDict["thumb_url"]!)")
                 self.categories.append(category)
                 self.tableView.reloadData()
             }
