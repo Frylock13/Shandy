@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class RecipesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -33,10 +34,7 @@ class RecipesViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
         
-        let c1 = Recipe.init(name: "First", thumbUrl: "http://s3.eu-central-1.amazonaws.com/cocktails-production/ingredients/images/000/000/003/original/open-uri20160925-8029-26q1p9?1474820351")
-        let c2 = Recipe.init(name: "Second", thumbUrl: "http://s3.eu-central-1.amazonaws.com/cocktails-production/ingredients/images/000/000/003/original/open-uri20160925-8029-26q1p9?1474820351")
-        recipes.append(c1)
-        recipes.append(c2)
+        downloadRecipesDataFromJson(category_id: _category.id)
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -63,5 +61,30 @@ class RecipesViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 130.0
+    }
+    
+    
+    func downloadRecipesDataFromJson(category_id: Int) {
+        
+        let recipesPath = "\(BASE_URL)/categories/\(category_id)/recipes.json"
+        let recipesUrl = URL(string: recipesPath)!
+        
+        Alamofire.request(recipesUrl).responseJSON { response in
+            debugPrint(response)     // prints detailed description of all response properties
+            
+            print("JSON: \(response.result.value)")
+            
+            self.addCategoriesToAnArray(array: response.result.value as! NSArray)
+        }
+    }
+    
+    private func addCategoriesToAnArray(array: NSArray) {
+        for categoryDict in array {
+            if let recipeDict = categoryDict as? NSDictionary {
+                let recipe = Recipe(name: "\(recipeDict["name"]!)", thumbUrl: "\(recipeDict["thumb_url"]!)")
+                self.recipes.append(recipe)
+                self.tableView.reloadData()
+            }
+        }
     }
 }

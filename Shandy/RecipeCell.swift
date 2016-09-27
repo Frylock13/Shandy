@@ -12,6 +12,8 @@ class RecipeCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var thumbImage: UIImageView!
+    @IBOutlet weak var ingredientsListLabel: UILabel!
+    
     
     func updateUI(recipe: Recipe) {
         titleLabel.text = recipe.name

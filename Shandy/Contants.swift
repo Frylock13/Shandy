@@ -8,6 +8,6 @@
 
 import Foundation
 
-let BASE_URL = "http://localhost:3000/api/v1/"
+let BASE_URL = "http://localhost:3000/api/v1"
 
 typealias DownloadComplete = () -> ()

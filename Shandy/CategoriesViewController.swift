@@ -54,7 +54,7 @@ class CategoriesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func downloadCategoriesDataFromJson() {
         
-        let categoriesPath = "\(BASE_URL)categories.json"
+        let categoriesPath = "\(BASE_URL)/categories.json"
         let categoriesUrl = URL(string: categoriesPath)!
         
         Alamofire.request(categoriesUrl).responseJSON { response in
@@ -69,7 +69,7 @@ class CategoriesViewController: UIViewController, UITableViewDelegate, UITableVi
     private func addCategoriesToAnArray(array: NSArray) {
         for categoryDict in array {
             if let categoryDict = categoryDict as? NSDictionary {
-                let category = Category(name: "\(categoryDict["name"]!)", slug: "\(categoryDict["slug"]!)", description: "\(categoryDict["description"]!)", recipesCount: "\(categoryDict["recipes_count"]!)", thumbUrl: "\(categoryDict["thumb_url"]!)")
+                let category = Category(id: categoryDict["id"]! as! Int, name: "\(categoryDict["name"]!)", slug: "\(categoryDict["slug"]!)", description: "\(categoryDict["description"]!)", recipesCount: "\(categoryDict["recipes_count"]!)", thumbUrl: "\(categoryDict["thumb_url"]!)")
                 self.categories.append(category)
                 self.tableView.reloadData()
             }
