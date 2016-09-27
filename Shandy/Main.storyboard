@@ -140,7 +140,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="HuM-fX-rXt" userLabel="Main Info">
-                                                    <frame key="frameInset" minX="8" minY="47" width="208" height="64"/>
+                                                    <frame key="frameInset" minX="8" minY="47" width="294" height="64"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="R5J-h2-JtN" userLabel="Thumb">
@@ -156,7 +156,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Co-FV-FaC" userLabel="Info">
-                                                            <frame key="frameInset" minX="94" width="114" height="64"/>
+                                                            <frame key="frameInset" minX="94" width="200" height="64"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Pis-XT-eTa" userLabel="Ingredients">
                                                                     <frame key="frameInset" width="114" height="34"/>
@@ -187,6 +187,9 @@
                                                                     </subviews>
                                                                 </stackView>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="200" id="enj-hM-tFS"/>
+                                                            </constraints>
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
@@ -197,6 +200,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="glassLabel" destination="P1V-qA-pqF" id="EDf-LV-Hx4"/>
                                             <outlet property="ingredientsListLabel" destination="LQ8-1c-2YU" id="RIC-kP-Vhe"/>
                                             <outlet property="thumbImage" destination="uMO-TH-7rp" id="Mve-t4-TaS"/>
                                             <outlet property="titleLabel" destination="k68-JB-a1d" id="qvl-r4-wn0"/>

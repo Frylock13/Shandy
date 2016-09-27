@@ -13,10 +13,13 @@ class RecipeCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var thumbImage: UIImageView!
     @IBOutlet weak var ingredientsListLabel: UILabel!
+    @IBOutlet weak var glassLabel: UILabel!
     
     
     func updateUI(recipe: Recipe) {
         titleLabel.text = recipe.name
+        glassLabel.text = recipe.glassName
+        ingredientsListLabel.text = recipe.ingredientsList
         
         let thumbUrl = URL(string: recipe.thumbUrl)
         downloadImage(url: thumbUrl!)

@@ -74,17 +74,33 @@ class RecipesViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             print("JSON: \(response.result.value)")
             
-            self.addCategoriesToAnArray(array: response.result.value as! NSArray)
+            self.addRecipesToAnArray(array: response.result.value as! NSArray)
         }
     }
     
-    private func addCategoriesToAnArray(array: NSArray) {
+    private func addRecipesToAnArray(array: NSArray) {
         for categoryDict in array {
+            var ingredientsList: [String] = []
+            
             if let recipeDict = categoryDict as? NSDictionary {
-                let recipe = Recipe(name: "\(recipeDict["name"]!)", thumbUrl: "\(recipeDict["thumb_url"]!)")
+                
+                if let ingredients = recipeDict["ingredients"] as? [Dictionary<String, AnyObject>] {
+                    for obj in ingredients {
+                        ingredientsList.append(obj["name"]! as! String)
+                    }
+                }
+                let joinedIngredientsArray = ingredientsList.joined(separator: ",")
+                
+                
+                let recipe = Recipe(name: "\(recipeDict["name"]!)", thumbUrl: "\(recipeDict["thumb_url"]!)", ingredientsList: joinedIngredientsArray, glassName: "\(recipeDict["glass_name"]!)")
+                
                 self.recipes.append(recipe)
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    func performIngredientsListToString(list: NSArray) {
+        
     }
 }
